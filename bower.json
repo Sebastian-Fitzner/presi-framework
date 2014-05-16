@@ -1,0 +1,23 @@
+{
+  "name": "learnbackbone",
+  "version": "0.1.0",
+  "dependencies": { 
+  
+
+    "jquery": "*",
+
+    "requirejs": "*",
+
+    "backbone": "*",
+
+	
+
+	
+	
+	 
+	"bourbon": "~3.1.8",
+	"neat": "~1.5.0"
+	
+  },
+  "devDependencies": {}
+}
