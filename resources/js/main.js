@@ -11,3 +11,7 @@ require.config({
 		}
 	}
 });
+
+define(['views/app'], function(App){
+	new App();
+});
