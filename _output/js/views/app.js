@@ -2,8 +2,9 @@ define([
 	'backbone',
 	'views/slides',
 	'collections/slides',
-	'routers/router'
-], function (Backbone, SlidesView, SlidesCollection, MainRouter) {
+	'routers/router',
+	'data-slides'
+], function (Backbone, SlidesView, SlidesCollection, MainRouter, Data) {
 	var appView = Backbone.View.extend({
 		el: 'body',
 		events: {
@@ -12,13 +13,13 @@ define([
 
 		initialize: function () {
 
-			var testcollection = [
-				{title: "my title"},
-				{title: "my title 2"}
-			];
+			var testcollection = new SlidesCollection(window.slides);
+			//testcollection.fetch();
+			console.log("collection", testcollection);
 
 			new SlidesView({
-				collection: new SlidesCollection(testcollection)
+				collection: testcollection
+
 			});
 
 			App.Router = new MainRouter();

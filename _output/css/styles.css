@@ -85,7 +85,8 @@ h2 {
 
 #main {
   width: 980px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
   #main h1 {
     font-size: 150%;
     font-weight: bold;
@@ -119,15 +120,13 @@ h2 {
         text-decoration: none; }
 
 .slides {
-  display: table;
+  display: block;
   width: 100%;
   height: 100%;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   .slides .slide {
-    width: 100%;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle; }
+    width: 980px; }
 
 article {
   clear: both;
