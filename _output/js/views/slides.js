@@ -57,15 +57,16 @@ define(['backbone', 'views/slide'], function (Backbone, SlideView) {
 				.animate({
 					'top': direction === 'next' ? '100%' : '-100%',
 					'opacity': 'hide'
-				}, 400, function () {
+				}, 400,
+				function () {
 					$(this).css('top', '0');
-
 					newSlide
 						.css('top', direction === 'next' ? '-100%' : '100%')
 						.animate({
 							'top': '0',
 							'opacity': 'show'
-						}, 400);
+						}, 400
+					);
 				});
 		},
 
