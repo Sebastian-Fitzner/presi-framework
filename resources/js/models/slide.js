@@ -2,7 +2,28 @@ define(['backbone'], function (Backbone) {
 	var Slide = Backbone.Model.extend({
 		defaults: {
 			type: 'note',
-			title: ''
+			title: '',
+			subtitle: '',
+			markdown: '',
+			image: ''
+		},
+
+		initialize: function () {
+			this.setFontSize();
+		},
+
+		setFontSize: function () {
+			var size,
+				fontLength = this.get('title').length;
+
+			if (fontLength >= 100){
+				size = "large";
+			} else if (fontLength >= 200){
+				size = "x-large";
+			} else {
+				size = "normal"
+			}
+			this.set('size', size);
 		}
 	});
 

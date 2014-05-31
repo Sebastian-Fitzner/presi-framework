@@ -5,6 +5,7 @@ define(['backbone', 'views/slide'], function (Backbone, SlideView) {
 
 		initialize: function () {
 			this.currentSlideIndex = 1;
+			this.lastSlide = 1;
 			this.slideLength = this.collection.length;
 			this.renderAll();
 
@@ -27,6 +28,8 @@ define(['backbone', 'views/slide'], function (Backbone, SlideView) {
 
 			this.animateToNewSlide(slides, newSlide, opts.direction);
 
+			App.Router.navigate('slides/' + this.currentSlideIndex);
+
 		},
 
 		setCurrentSlideIndex: function (opts) {
@@ -35,6 +38,7 @@ define(['backbone', 'views/slide'], function (Backbone, SlideView) {
 				return this.currentSlideIndex = ~~opts.slideIndex;
 			}
 
+			this.lastSlide = this.currentSlideIndex;
 			this.currentSlideIndex += opts.direction === 'next' ? 1 : -1;
 
 			if (this.currentSlideIndex > this.slideLength) {
@@ -48,26 +52,13 @@ define(['backbone', 'views/slide'], function (Backbone, SlideView) {
 		},
 
 		setNewSlide: function (slides) {
-			return slides.eq(this.currentSlideIndex - 1)
+			return slides.eq(this.currentSlideIndex - 1);
 		},
 
 		animateToNewSlide: function (slides, newSlide, direction) {
-			slides.filter(':visible')
-				.css('position', 'absolute')
-				.animate({
-					'top': direction === 'next' ? '100%' : '-100%',
-					'opacity': 'hide'
-				}, 400,
-				function () {
-					$(this).css('top', '0');
-					newSlide
-						.css('top', direction === 'next' ? '-100%' : '100%')
-						.animate({
-							'top': '0',
-							'opacity': 'show'
-						}, 400
-					);
-				});
+			slides.removeClass('slide-rotateCubeTopIn slide-rotateCubeTopOut current');
+			slides.eq(this.lastSlide - 1).addClass('current slide-rotateCubeTopOut');
+			slides.eq(this.currentSlideIndex - 1).addClass('current slide-rotateCubeTopIn');
 		},
 
 		renderAll: function () {

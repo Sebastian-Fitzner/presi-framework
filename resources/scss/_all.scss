@@ -1,20 +1,15 @@
-// Reset imports
 @import "global/reset";
-
-// Frameworks
-
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
-
-// Utilities
+@import "global/vars";
+@import "utils/animations";
 @import "utils/extends";
 @import "utils/mixins";
-
-// Global
-@import "global/vars";
 @import "global/main";
-
-// Modules
+@import "modules/code";
 @import "modules/forms";
+@import "modules/highlight";
+@import "modules/inner-text";
 @import "modules/modal";
+@import "modules/monokai";
 @import "modules/player";

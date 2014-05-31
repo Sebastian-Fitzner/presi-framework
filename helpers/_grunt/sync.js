@@ -68,5 +68,15 @@ module.exports = {
 				dest: '<%= paths.dist %>/bower_components/jquery/dist'
 			}
 		]
+	},
+	prism: {
+		files: [
+			// includes files within path and its sub-directories
+			{
+				cwd: '<%= paths.src %>/bower_components/prismjs',
+				src: 'prism.js',
+				dest: '<%= paths.dist %>/bower_components/prismjs'
+			}
+		]
 	}
 };

@@ -16,7 +16,8 @@ module.exports = {
 			'<%= paths.dist %>/{,*/}*.html',
 			'<%= paths.dist %>/css/{,*/}*.css', // if you want to use browser-sync for css just comment out this line
 			'<%= paths.dist %>/js/{,*/}*.js',
-			'<%= paths.dist %>/assets/**/*'
+			'<%= paths.dist %>/img/**/*',
+			'<%= paths.dist %>/files/**/*'
 		]
 	},
     js: {
@@ -29,7 +30,7 @@ module.exports = {
     },
 	scss: {
 		files: '<%= paths.src %>/scss/**/*',
-		tasks: 'sass:dist'
+		tasks: ['sass:dist', 'autoprefixer']
 	},
 	globbing: {
 		options: {

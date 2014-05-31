@@ -12,7 +12,7 @@ module.exports = {
 					// single list element
 					var listEl = list[i];
 					// clean up our list element to get only the path and filename
-					var listElName = listEl.replace(/_([^_]*)$/, ""+'$1').replace(/\.scss|\.sass/gi, "");
+					var listElName = listEl.replace(/_([^_]*)$/, ""+'$1').replace(/\.scss|\.sass|\.css/gi, "");
 					// concatenate our cleaned up item with '@import ""' and add it to our imports array
 					imports += '@import "' + listElName + '";\n';
 				}

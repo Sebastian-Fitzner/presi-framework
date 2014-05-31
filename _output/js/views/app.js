@@ -14,12 +14,9 @@ define([
 		initialize: function () {
 
 			var testcollection = new SlidesCollection(window.slides);
-			//testcollection.fetch();
-			console.log("collection", testcollection);
 
 			new SlidesView({
 				collection: testcollection
-
 			});
 
 			App.Router = new MainRouter();
@@ -29,7 +26,7 @@ define([
 		keyUp: function (e) {
 			// 37 = left
 			// 39 = right
-			if(e.keyCode === 37 || e.keyCode === 39){
+			if (e.keyCode === 37 || e.keyCode === 39) {
 				App.Vent.trigger('changeSlide', {
 					direction: e.keyCode === 37 ? 'prev' : 'next'
 				})
