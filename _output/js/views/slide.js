@@ -1,23 +1,48 @@
-define(['backbone'], function (Backbone) {
+define(['backbone', 'marked'], function (Backbone, marked) {
 
 	var Slide = Backbone.View.extend({
 		tagName: 'div',
 		className: 'slide',
+		template: _.template($('#slideTemplate').html()),
 
 
 		// We need some templates to make the whole thing better
 		render: function () {
-			var innerEl = this.$el;
-			innerEl.append('<section class="slide-content"><h1 class="' + this.model.get('size') + '">' + this.model.get('title') + '</h1><h2>' + this.model.get('subtitle') + '</h2></section>');
+			this.renderTemplate();
 			this.getContentType();
+			this.centerSlide();
 			return this;
+		},
+
+		renderTemplate: function () {
+			var innerEl = this.$el;
+			innerEl.html(this.template(this.model.toJSON()));
+		},
+
+		centerSlide: function () {
+			var that = this,
+				el = that.$el,
+				slide = el.find('.slide-content'),
+				slideHeight,
+				windowHeight;
+
+			var timeout = setTimeout(function () {
+				windowHeight = $(window).height();
+				slideHeight = el.find('.slide-content').outerHeight();
+				var calc = (windowHeight-slideHeight)/2;
+
+				slide.css({
+					'margin-top': calc < 0 ? '0px' : calc
+				})
+
+			}, 1000);
 		},
 
 		getContentType: function () {
 			if (this.model.get('text')) {
 				this.renderText();
 			}
-			if (this.model.get('markdown')) {
+			if (this.model.get('md')) {
 				this.renderMarkdown();
 			}
 			if (this.model.get('image')) {
@@ -32,47 +57,37 @@ define(['backbone'], function (Backbone) {
 		},
 
 		renderText: function () {
-			this.$el.addClass('text')
-				.append(
-					'<section class="slide-content text-inner"><p>' + this.model.get('text') + '</p></section>'
-				);
+			this.$el.addClass('text');
+			this.renderTemplate();
 		},
 
 		renderMarkdown: function () {
 			var that = this,
-				markdown = this.model.get('markdown');
+				md = this.model.get('md');
 
-			if ($.isPlainObject(markdown)) {
-				return _.each(markdown, function (markdownPath) {
-					that.getMarkdown(markdownPath);
+			if ($.isPlainObject(md)) {
+				return _.each(md, function (mdPath) {
+					that.getMarkdown(mdPath);
 				})
 			} else {
-				this.getMarkdown(markdown);
+				that.getMarkdown(md);
 			}
 
 		},
 
-		getMarkdown: function (markdownPath) {
+		getMarkdown: function (mdPath) {
 			var that = this;
-
-			$.get(markdownPath, function (customMarkdown) {
-				that.$el
-					.append('<section class="slide-content text-inner">' + markdown.toHTML(customMarkdown) + '</section>');
-			});
+			that.$el.html(that.template(that.model.toJSON()));
 		},
 
 		renderImage: function () {
-			this.$el.addClass('image')
-				.append(
-					'<section class="slide-content"><img src="' + this.model.get('image') + '" /></section>'
-				);
+			this.$el.addClass('image');
+			this.renderTemplate();
 		},
 
 		renderQuote: function () {
-			this.$el.addClass('quote')
-				.append(
-					'<section class="slide-content"><blockquote>' + this.model.get('quote') + '</blockquote></section>'
-				);
+			this.$el.addClass('quote');
+			this.renderTemplate();
 		},
 
 		renderCode: function () {
@@ -90,14 +105,11 @@ define(['backbone'], function (Backbone) {
 		getCode: function (codePath) {
 			var that = this;
 
-			$.get(codePath, function (code) {
-				that.$el
-					.append('<section class="slide-content"><pre><code>' + _.escape(code) + '</code></pre></section>');
+			that.$el.html(that.template(that.model.toJSON()));
 
-				$(document).ready(function () {
-					$('pre code').each(function (i, e) {
-						hljs.highlightBlock(e)
-					});
+			$(document).ready(function () {
+				$('pre code').each(function (i, e) {
+					hljs.highlightBlock(e)
 				});
 			});
 		}

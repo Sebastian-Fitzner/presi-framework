@@ -129,6 +129,9 @@ p, ul {
 		.slide-content {
 			width: 1280px;
 			margin: 1em auto;
+			.code {
+				margin-top: -2em;
+			}
 		}
 	}
 }

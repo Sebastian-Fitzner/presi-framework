@@ -1,0 +1,22 @@
+.loader {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -30px -30px 0 0;
+	background-color: #f4f4f4;
+	animation: rotatesquare 1.2s infinite ease-in-out;
+}
+
+@keyframes rotatesquare {
+	0% {
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+	}
+	50% {
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	}
+	100% {
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	}
+}

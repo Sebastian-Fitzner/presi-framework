@@ -1,6 +1,7 @@
 require.config({
 	paths: {
 		jquery: '../bower_components/jquery/dist/jquery',
+		marked: '../bower_components/marked/lib/marked',
 		underscore: '../bower_components/underscore/underscore',
 		backbone: '../bower_components/backbone/backbone'
 	},
@@ -8,6 +9,13 @@ require.config({
 		'backbone': {
 			deps: ['underscore', 'jquery'],
 			exports: 'Backbone'
+		},
+		'underscore': {
+			deps: ['marked'],
+			exports: '_'
+		},
+		'marked': {
+			exports: 'marked'
 		}
 	}
 });

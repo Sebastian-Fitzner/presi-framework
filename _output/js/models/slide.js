@@ -4,8 +4,11 @@ define(['backbone'], function (Backbone) {
 			type: 'note',
 			title: '',
 			subtitle: '',
-			markdown: '',
-			image: ''
+			md: '',
+			image: '',
+			quote: '',
+			code: '',
+			text: ''
 		},
 
 		initialize: function () {

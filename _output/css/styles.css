@@ -450,6 +450,8 @@ p + h3, ul + h3 {
     .slides .slide .slide-content {
       width: 1280px;
       margin: 1em auto; }
+      .slides .slide .slide-content .code {
+        margin-top: -2em; }
 
 ::-webkit-scrollbar {
   width: 12px; }
@@ -664,6 +666,46 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
   -webkit-column-width: 50%;
   -moz-column-width: 50%;
   column-width: 50%; }
+
+.loader {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px -30px 0 0;
+  background-color: #f4f4f4;
+  -webkit-animation: rotatesquare 1.2s infinite ease-in-out;
+  animation: rotatesquare 1.2s infinite ease-in-out; }
+
+@-webkit-keyframes rotatesquare {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+
+@keyframes rotatesquare {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -ms-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -ms-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
 
 /*
 

@@ -5,4 +5,30 @@ lead: Welcome to your own prototype!
 ---
 
 <div class="slides">
+	<div class="loader"></div>
 </div>
+
+<script id="slideTemplate" type="text/template">
+	<section class="slide-content">
+		<h1 class=""><%= title %></h1>
+
+		<h2><%= subtitle %></h2>
+		<% if (text) { %>
+		<div class="text-inner"> <%= text %></div>
+		<% } %> <% if (quote) { %>
+		<div class="text-inner quote"><%= quote %></div>
+		<% } %> <% if (image) { %>
+		<div class="slide-image"><img src="<%= image %>"/></div>
+		<% } %><% if (md) { %>
+		<div class="text-inner markdown">
+			<% var that = this; $.get(md, function (syntax) { that.$el.find('.markdown').html(marked(syntax)); }); %>
+		</div>
+		<% } %><% if (code) { %>
+		<div class="code">
+			<pre>
+				<code> <% var that = this; $.get(code, function (syntax) { that.$el.find('code').html(syntax); }); %> </code>
+			</pre>
+		</div>
+		<% $(document).ready(function () { $('pre code').each(function (i, e) { hljs.highlightBlock(e) }); }); %> <% } %>
+	</section>
+</script>

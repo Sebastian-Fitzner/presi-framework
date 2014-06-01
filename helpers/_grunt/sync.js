@@ -69,13 +69,13 @@ module.exports = {
 			}
 		]
 	},
-	prism: {
+	marked: {
 		files: [
 			// includes files within path and its sub-directories
 			{
-				cwd: '<%= paths.src %>/bower_components/prismjs',
-				src: 'prism.js',
-				dest: '<%= paths.dist %>/bower_components/prismjs'
+				cwd: '<%= paths.src %>/bower_components/marked/lib',
+				src: 'marked.js',
+				dest: '<%= paths.dist %>/bower_components/marked/lib'
 			}
 		]
 	}
