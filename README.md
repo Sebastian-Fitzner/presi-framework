@@ -3,10 +3,11 @@ This is just a simple framework which can be used to create nice and simple pres
 
 
 ## Install Requirements
-The project is build in grunt. The only thing you have to do, is to install all the dependencies with:
+The project is build in grunt. The only two things you have to do, is to install all the dependencies with:
 
 ```
 npm install
+bower install 
 ```
 
 ## How to use
