@@ -84,6 +84,7 @@ module.exports = function (grunt) {
 		'newer:assemble',
 		'concurrent:syncing',
 		'watchCSS',
+		'autoprefixer',
 		'connect:livereload',
 		//'browser_sync',
 		'watch'

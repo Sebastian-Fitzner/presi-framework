@@ -28,6 +28,10 @@ module.exports = {
         files: '<%= paths.src %>/assets/**/*',
         tasks: 'sync:assets'
     },
+    data: {
+        files: '<%= paths.src %>/data/data-sync/**/*',
+        tasks: 'sync:data'
+    },
 	scss: {
 		files: '<%= paths.src %>/scss/**/*',
 		tasks: ['sass:dist', 'autoprefixer']

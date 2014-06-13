@@ -2,10 +2,10 @@ Arbeitswerkzeuge sind letztlich nichts anderes als „Erleichterungen“ für da
 Sie bringen Hilfsmittel mit, die den Workflow im Frontend erleichtern sollen.
 
 ### Vorteile:
-- Automatismen
 - Versionsverwaltung
-- Scaffolding
 - Strukturierung der Arbeit
+- Automatismen
+- Scaffolding
 
 ### Übersicht wichtiger Tools:
 - Git
@@ -15,5 +15,3 @@ Sie bringen Hilfsmittel mit, die den Workflow im Frontend erleichtern sollen.
 - Bower
 - Yeoman
 - Generator-Prototype
-
-![Alternativer Text](http://placekitten.com/1200/600)

@@ -1,3 +1,6 @@
+/**
+ * Configure our RequireJS and initialize our application
+ */
 require.config({
 	paths: {
 		jquery: '../bower_components/jquery/dist/jquery',
@@ -22,7 +25,7 @@ require.config({
 
 define(['views/app'], function(AppView){
 	window.App = {
-		Vent: _.extend({}, Backbone.Events)
+		Vent: _.extend({}, Backbone.Events) // We use the underscore lib to clone Backbone.Events into the Vent object without referencing it
 	};
-	new AppView();
+	new AppView(); // Init app view
 });

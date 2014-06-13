@@ -1,5 +1,4 @@
-window.slides = {
-	webtools: [
+[
 	{
 		"title": "Werkzeuge im Frontend",
 		"classes": "highlight w40",
@@ -32,19 +31,5 @@ window.slides = {
 		"md": "files/webtools/md/04-1--compass.md",
 		"code": "files/webtools/cmd/grunt--grunt-cli.txt",
 		"codetype": "bash"
-	},
-	{
-		"title": "CSS",
-		"subtitle": "test",
-		"code": "files/css/test.css"
-	},
-	{
-		"title": "Handlebars",
-		"subtitle": "test",
-		"code": "files/hbs/test.hbs"
-	},
-	{
-		"title": "Markdown",
-		"md": "files/md/test.md"
 	}
-]}
+]

@@ -9,7 +9,7 @@ lead: Welcome to your own prototype!
 </div>
 
 <script id="slideTemplate" type="text/template">
-	<section class="slide-content">
+	<section class="slide-content <%= classes %>">
 		<h1 class=""><%= title %></h1>
 
 		<h2><%= subtitle %></h2>
@@ -26,9 +26,9 @@ lead: Welcome to your own prototype!
 		<% } %><% if (code) { %>
 		<div class="code">
 			<pre>
-				<code> <% var that = this; $.get(code, function (syntax) { that.$el.find('code').html(syntax); }); %> </code>
+				<code class="<%= codetype %>"> <% var that = this; $.get(code, function (syntax) { that.$el.find('code').html(syntax); }); %> </code>
 			</pre>
 		</div>
-		<% $(document).ready(function () { $('pre code').each(function (i, e) { hljs.highlightBlock(e) }); }); %> <% } %>
+		<% } %>
 	</section>
 </script>

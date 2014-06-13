@@ -1,21 +1,26 @@
+/**
+ * Main Model
+ */
 define(['backbone'], function (Backbone) {
 	var Slide = Backbone.Model.extend({
-		defaults: {
+		defaults: { // Define some types which can be used
 			type: 'note',
+			classes: '',
 			title: '',
 			subtitle: '',
 			md: '',
 			image: '',
 			quote: '',
 			code: '',
+			codetype: '',
 			text: ''
 		},
 
 		initialize: function () {
-			this.setFontSize();
+			this.setFontSize(); // Just to have the possibility to add classes to our title dependent on the length of the title
 		},
 
-		setFontSize: function () {
+		setFontSize: function () { // Set some classes
 			var size,
 				fontLength = this.get('title').length;
 
