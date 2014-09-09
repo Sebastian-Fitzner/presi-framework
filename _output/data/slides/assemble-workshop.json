@@ -26,13 +26,6 @@
 		"code": "files/webtools/others/config.rb"
 	},
 	{
-		"title": "Troubleshooting in SASS, Compass",
-		"subtitle": "Fehlende Gems",
-		"md": "files/webtools/md/04-1--compass.md",
-		"code": "files/webtools/cmd/grunt--grunt-cli.txt",
-		"codetype": "bash"
-	},
-	{
 		"title": "Grunt",
 		"subtitle": "Automatismen",
 		"md": "files/webtools/md/05--grunt.md"
@@ -58,9 +51,14 @@
 		"md": "files/webtools/md/08--pg.md"
 	},
 	{
-		"title": "General Overview",
-		"subtitle": "Wie alles zusammenkommt",
-		"classes": "w100",
-		"image": "img/nodejs2.png"
+		"title": "Wie alles zusammenkommt",
+		"subtitle": "",
+		"classes": "",
+		"image": "img/overview-tools.png"
+	},
+	{
+		"title": "Setze ein Projekt auf",
+		"classes": "highlight w40",
+		"md": "files/webtools/md/aufgabe-01.md"
 	}
 ]

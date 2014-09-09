@@ -31,5 +31,36 @@
 		"md": "files/webtools/md/04-1--compass.md",
 		"code": "files/webtools/cmd/grunt--grunt-cli.txt",
 		"codetype": "bash"
+	},
+	{
+		"title": "Grunt",
+		"subtitle": "Automatismen",
+		"md": "files/webtools/md/05--grunt.md"
+	},
+	{
+		"title": "Grunt ... ",
+		"subtitle": "... ist ein Taskrunner-Tool in JS geschrieben",
+		"md": "files/webtools/md/05-1--grunt.md"
+	},
+	{
+		"title": "Bower",
+		"subtitle": "Webpakete verwalten",
+		"md": "files/webtools/md/06--bower.md"
+	},
+	{
+		"title": "Yeoman",
+		"subtitle": "Scaffolding – wie man sich das Aufsetzen von Projekten spart",
+		"md": "files/webtools/md/07--yeoman.md"
+	},
+	{
+		"title": "PG - Prototype Generator",
+		"subtitle": "(http://prototype-generator.com/)",
+		"md": "files/webtools/md/08--pg.md"
+	},
+	{
+		"title": "General Overview",
+		"subtitle": "Wie alles zusammenkommt",
+		"classes": "w100",
+		"image": "img/nodejs2.png"
 	}
 ]

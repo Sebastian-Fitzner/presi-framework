@@ -20,7 +20,7 @@ define([
 			var collection = new SlidesCollection(); // Define a new collection which we declare as parameter in our function
 
 			collection.fetch({ // fetch funtion
-				url: 'data/slides/webtools.json', // Define the models file
+				url: 'data/slides/assemble-workshop.json', // Define the models file
 				complete: function () { // On complete ...
 					that.initApp(collection); // ... start @initApp()
 				}
