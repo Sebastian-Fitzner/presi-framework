@@ -57,8 +57,15 @@
 		"image": "img/overview-tools.png"
 	},
 	{
-		"title": "Setze ein Projekt auf",
+		"title": "Aufgabe",
+		"subtitle": "Setze ein Standard-Projekt auf",
 		"classes": "highlight w40",
 		"md": "files/webtools/md/aufgabe-01.md"
+	},
+	{
+		"title": "Aufgabe",
+		"subtitle": "Setze ein individuelles Projekt auf",
+		"classes": "highlight w40",
+		"md": "files/webtools/md/aufgabe-02.md"
 	}
 ]

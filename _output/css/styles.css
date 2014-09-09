@@ -488,8 +488,14 @@ p + h3, ul + h3 {
         height: 0;
         border-top: 55px solid #000;
         border-right: 60px solid transparent; }
-      .slides .slide .highlight.text-inner {
-        margin-top: -20px; }
+      .slides .slide .highlight .text-inner {
+        margin-top: -20px;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%; }
 
 ::-webkit-scrollbar {
   width: 12px; }
