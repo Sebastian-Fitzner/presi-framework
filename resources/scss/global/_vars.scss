@@ -1,5 +1,4 @@
-
-@import "../../bower_components/neat/app/assets/stylesheets/neat-helpers"; 
+@import "../../bower_components/neat/app/assets/stylesheets/neat-helpers";
 
 // Change the grid settings
 $column: 90px;
@@ -16,4 +15,4 @@ $mobile: new-breakpoint(max-width 480px 4);
 
 // Colors
 $color-validate-error: red;
-$color-main: #000;
+$color-main: black;

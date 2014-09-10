@@ -6,7 +6,8 @@
 		@media only screen and (min-width: $min) and (max-width: $max) {
 			@content;
 		}
-	} @else {
+	}
+	@else {
 		@media only screen and (max-width: $max) {
 			@content;
 		}
@@ -22,9 +23,9 @@
 
 @mixin grunticon($name) {
 	@extend %icon-data-svg-#{$name};
-//   @at-root .ie8 & {
-// 	     @extend %icon-data-png-#{$name};
-//   }
+	//   @at-root .ie8 & {
+	// 	     @extend %icon-data-png-#{$name};
+	//   }
 	.lt-ie9 & {
 		@extend %icon-png-#{$name};
 	}

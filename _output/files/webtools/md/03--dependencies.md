@@ -1,7 +1,7 @@
 ### NodeJS
 ![NodeJS](img/nodejs2.png)
 
-**Tools:** Grunt, Libsass, Bower, Yeoman, Generator-Prototype
+**Tools:** Grunt, Libsass, Bower, Yeoman, PG
 
 NodeJS ist nichts anderes als JavaScript für Netzwerk-Applikationen, d.h. JavaScript kann serverseitig eingesetzt werden.
 

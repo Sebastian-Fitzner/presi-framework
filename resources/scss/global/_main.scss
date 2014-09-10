@@ -17,9 +17,25 @@ body {
 	line-height: 160%;
 }
 
+a {
+	background: #777;
+	color: #fff;
+	&:hover {
+		background: #000;
+	}
+}
+
 p {
 	margin-top: 0;
 	margin-bottom: 0.5em;
+
+}
+
+code {
+	p &, ul & {
+		background: #fff;
+		font-family: Courier;
+	}
 }
 
 strong, b {
@@ -65,7 +81,6 @@ p, ul {
 	h1 {
 		font-size: 150%;
 		margin-bottom: 0.2em;
-
 		@include breakpoint(568px) {
 			font-size: 100%;
 		}
@@ -86,6 +101,9 @@ p, ul {
 	ul {
 		margin-left: 1em;
 		margin-top: 0.5em;
+		+ p {
+			margin-top: 0.5em;
+		}
 		li {
 			font-size: 100%;
 			line-height: 150%;
@@ -96,7 +114,6 @@ p, ul {
 			}
 
 			a {
-				color: #666;
 				text-decoration: none;
 			}
 		}
@@ -137,7 +154,9 @@ p, ul {
 				margin-top: -2em;
 			}
 		}
-
+		em {
+			font-style: italic;
+		}
 		// Hihglight class
 		.highlight {
 			position: relative;
@@ -160,9 +179,28 @@ p, ul {
 				font-size: 2.6rem;
 				text-transform: uppercase;
 			}
+			a {
+				background: #777;
+				color: #fff;
+				&:hover {
+					background: #000;
+				}
+			}
+			p {
+				code {
+					background: #333;
+				}
+			}
 			// width classes
 			&.w40 {
 				width: 700px;
+				img {
+					width: 45%;
+				}
+			}
+			// width classes
+			&.w70 {
+				width: 900px;
 				img {
 					width: 45%;
 				}
@@ -181,7 +219,6 @@ p, ul {
 				margin-top: -20px;
 				column-count: 1;
 				column-width: 100%;
-
 			}
 		}
 	}

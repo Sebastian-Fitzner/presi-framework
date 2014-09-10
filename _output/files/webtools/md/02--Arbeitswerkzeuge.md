@@ -1,5 +1,5 @@
 Arbeitswerkzeuge sind letztlich nichts anderes als „Erleichterungen“ für das Frontend.
-Sie enthalten Hilfsmittel, die den Workflow im Frontend erleichtern sollen.
+Sie bringen Hilfsmittel mit, die den Workflow im Frontend erleichtern sollen.
 
 ### Vorteile:
 - Strukturierung der Arbeit
@@ -12,4 +12,4 @@ Sie enthalten Hilfsmittel, die den Workflow im Frontend erleichtern sollen.
 - Libsass
 - Bower
 - Yeoman
-- Generator-Prototype
+- PG

@@ -1,1 +1,1 @@
-Git, SASS/Compass, Libsass, Grunt, Bower, Yeoman, Generator-Prototype
+Git, SASS/Compass, Libsass, Grunt, Bower, Yeoman, PG

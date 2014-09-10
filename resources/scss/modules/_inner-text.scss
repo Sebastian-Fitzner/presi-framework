@@ -5,4 +5,8 @@
 	&.markdown {
 		margin-bottom: 1em;
 	}
+	.column-single & {
+		column-count: 1;
+		column-width: 100%;
+	}
 }

@@ -26,7 +26,7 @@ lead: Welcome to your own prototype!
 		<% } %><% if (code) { %>
 		<div class="code">
 			<pre>
-				<code class="<%= codetype %>"> <% var that = this; $.get(code, function (syntax) { that.$el.find('code').html(syntax); }); %> </code>
+				<code class="<% codetype %>"> <% var that = this; $.get(code, function (syntax) { that.$el.find('code').html(syntax); }); %> </code>
 			</pre>
 		</div>
 		<% } %>

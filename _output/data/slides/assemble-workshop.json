@@ -20,12 +20,6 @@
 		"classes": "highlight w40"
 	},
 	{
-		"title": "SASS, Compass und meine Gem-Pakete",
-		"subtitle": "Die kleinste Einheit",
-		"md": "files/webtools/md/04--compass.md",
-		"code": "files/webtools/others/config.rb"
-	},
-	{
 		"title": "Grunt",
 		"subtitle": "Automatismen",
 		"md": "files/webtools/md/05--grunt.md"
@@ -65,7 +59,101 @@
 	{
 		"title": "Aufgabe",
 		"subtitle": "Setze ein individuelles Projekt auf",
-		"classes": "highlight w40",
+		"classes": "highlight w70",
 		"md": "files/webtools/md/aufgabe-02.md"
+	},
+	{
+		"title": "Assemble",
+		"subtitle": "Template Engine basierend auf JavaScript",
+		"md": "files/webtools/md/09--Assemble-Intro.md"
+	},
+	{
+		"title": "Assemble",
+		"subtitle": "Datei-Struktur",
+		"md": "files/webtools/md/10--Assemble-Struktur.md"
+	},
+	{
+		"title": "Assemble Syntax",
+		"subtitle": "Basics von HandlebarsJS",
+		"md": "files/webtools/md/11--Assemble-Syntax.md",
+		"classes": "column-single"
+	},
+	{
+		"title": "Assemble Layouts",
+		"subtitle": "Seitentemplates in Assemble",
+		"md": "files/webtools/md/11--Assemble-Layouts.md",
+		"classes": "column-single"
+	},
+	{
+		"title": "Assemble Pages",
+		"subtitle": "Seiten in Assemble",
+		"md": "files/webtools/md/12--Assemble-Pages.md",
+		"classes": "column-single"
+	},
+	{
+		"title": "Aufgabe",
+		"subtitle": "Assemble Layouts & Pages",
+		"md": "files/webtools/md/aufgabe-03--Assemble-Layouts.md",
+		"classes": "highlight w70"
+	},
+	{
+		"title": "Assemble Partials",
+		"md": "files/webtools/md/13--Assemble-Partials.md"
+	},
+	{
+		"title": "Assemble Partials Example",
+		"md": "files/webtools/md/14--Assemble-Simple-Partial.md",
+		"classes": "column-single"
+	},
+	{
+		"title": "Aufgabe",
+		"subtitle": "Assemble Partials",
+		"md": "files/webtools/md/aufgabe-04--Assemble-Partials.md",
+		"classes": "highlight w70"
+	},
+	{
+		"title": "Assemble Data",
+		"subtitle": "Daten/Inhalte trennen",
+		"md": "files/webtools/md/15--JSON.md"
+	},
+	{
+		"title": "JSON Example",
+		"subtitle": "Standard-Artikel",
+		"md": "files/webtools/md/15-1--JSON.md",
+		"classes": "column-single"
+	},
+	{
+		"title": "JSON Example 2",
+		"subtitle": "Mehrere Inhalte per each ausgeben",
+		"md": "files/webtools/md/15-2--JSON.md",
+		"classes": "column-single"
+	},
+	{
+		"title": "Aufgabe",
+		"subtitle": "Assemble Data",
+		"md": "files/webtools/md/aufgabe-05--Assemble-Data.md",
+		"classes": "highlight w70"
+	},
+	{
+		"title": "Assemble Helpers",
+		"md": "files/webtools/md/16--Assemble-Helpers.md",
+		"classes": "column-single"
+	},
+	{
+		"title": "Aufgabe",
+		"subtitle": "Assemble Helpers",
+		"md": "files/webtools/md/aufgabe-06--Assemble-Helpers.md",
+		"classes": "highlight w70"
+	},
+	{
+		"title": "Assemble Custom Helpers",
+		"md": "files/webtools/md/17--Assemble-Custom-Helpers.md",
+		"classes": "column-single"
+	},
+	{
+		"title": "Aufgabe",
+		"subtitle": "Assemble Custom Helper Example",
+		"md": "files/webtools/md/aufgabe-07--Assemble-Custom-Helpers.md",
+		"classes": "highlight w70"
 	}
 ]

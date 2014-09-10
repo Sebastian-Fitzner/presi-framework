@@ -1,4 +1,4 @@
-Erstelle ein Verzeichnis und führe darin über die Konsole **yo prototype** aus.
+Erstelle ein Verzeichnis und führe darin über die Konsole `yo prototype` aus.
 
 Nun wähle "Custom Installation" aus.
 
@@ -10,4 +10,4 @@ Hier bitte folgende Einstellungen festlegen:
 * SCSS Frameworks: Keine
 
 
-Starte das Projekt via **grunt**.
+Starte das Projekt via `grunt`.
